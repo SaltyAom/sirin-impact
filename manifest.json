@@ -1,0 +1,23 @@
+  
+{
+    "short_name": "Sirin Impact 3",
+    "name": "Sirin Impact 3",
+    "icons": [
+      {
+        "src": "/assets/sirin_impact_192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/sirin_impact.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#f1f6fe",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#836693",
+    "orientation": "portrait"
+}

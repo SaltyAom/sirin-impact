@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <!-- Initialize -->
+    <meta http-equiv="content-type" content="text/html, charset=utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Search Engine -->
+    <title>Sirin Impact</title>
+    <meta name="title" content="Sirin Impact 3">
+    <meta name="description" content="There was a joke of Sirin being an icon of Honkai Impact 3. So I just want to make that icon look like real app, lol.">
+    <meta name="author" content="aomkirby">
+    <link rel="icon" href="/assets/sirin_impact.png">
+    <link rel="shortcut icon" href="/assets/sirin_impact.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sirin Impact 3">
+    <meta property="og:description" content="There was a joke of Sirin being an icon of Honkai Impact 3. So I just want to make that icon look like real app, lol.">
+    <meta property='article:author' content="aomkirby">
+    <meta property='og:site_name' content="Sirin Impact 3">
+    <meta property="og:image" content="https://sirin-impact.now.sh/assets/sirin_impact.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sirin Impact 3">
+    <meta name="twitter:description" content="There were a joke of Sirin being an icon of Honkai Impact 3. So I just want to make that icon look like real app, lol.">
+    <meta name="twitter:image" content="https://sirin-impact.now.sh/assets/sirin_impact.png">
+
+    <!-- Web App -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#836693">
+
+    <!-- MS Web App -->
+    <meta name="application-name" content="Sirin Impact 3">
+    <meta name="mssmarttagspreventparsing" content="true">
+    <meta name="msapplication-window" content="width=1366;height=768"> 
+    <meta name="msapplication-navbutton-color" content="#836693">
+    <meta name="msapplication-tooltip" content="There were a joke of Sirin being an icon of Honkai Impact 3. So I just want to make that icon look like real app, lol.">
+
+    <!-- Apple Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sirin Impact 3">
+    <link rel="apple-touch-icon" href="/assets/sirin_impact.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+    <meta name='format-detection' content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <style>
+        :root {
+            --primary: #007aff;
+            --text-on-primary: #fff;
+            --title: #222;
+            --detail: #666;
+            --fade: #8e8e93;
+            --background: #f1f6fe;
+        }
+
+        @font-face {
+            font-family: "Product Sans";
+            src: url("/assets/Product Sans Regular.ttf") format("truetype")
+        }
+
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, "Product Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        ::selection, ::-webkit-selection {
+            background-color: rgba(0,123,255, .25);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            background-color: var(--background);
+        }
+
+        #icon-layout {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0 0 30px 0;
+        }
+
+        #layout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 610px;
+            min-height: 100vh;
+            margin: 0 auto;
+        }
+
+        #app-detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 0 0 30px;
+        }
+
+        #app-title {
+            margin: 0 0 0 0;
+            color: var(--title);
+            font-size: 40px;
+            font-weight: normal;
+            cursor: default;
+        }
+
+        #sirin-icon {
+            display: block;
+            width: 144px;
+            height: 144px;
+            border-radius: 24px;
+        }
+
+        #detail {
+            color: var(--detail);
+            font-size: 24px;
+            line-height: 1.5em;
+            cursor: default;
+        }
+
+        #disclaimer {
+            color: var(--fade);
+            margin: 10px 0 0 0;
+            font-size: 12px;
+            line-height: 1.5em;
+            cursor: default;
+        }
+
+        #a2hs, #a2hs-ios {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 0;
+            margin: 20px 0 0 0;
+            padding: 7px 15px;
+            color: var(--text-on-primary);
+            font-size: 19px;
+            background-color: var(--primary);
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #a2hs-ios {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 960px){
+            #layout {
+                width: 70%;
+            }
+        }
+
+        @media screen and (min-width: 568px) and (max-width: 767.9px){
+            #layout {
+                width: 80%;
+            }
+        }
+
+        @media screen and (max-width: 567.9px){
+            #layout {
+                width: calc(100% - 30px);
+            }
+
+            #app-title {
+                font-size: 26px;
+            }
+
+            #sirin-icon {
+                width: 108px;
+                height: 108px;
+                border-radius: 16px;
+            }
+
+            #app-detail {
+                margin-left: 20px;
+            }
+
+            #a2hs, #a2hs-ios {
+                font-size: 16px;
+                border-radius: 4px;
+            }
+
+            #detail {
+                font-size: 21px;
+            }
+        }
+
+        @supports (-webkit-overflow-scrolling: touch){
+            #a2hs {
+                display: none;
+            }
+            #a2hs-ios {
+                display: flex;
+            }
+        }
+
+        #dialog-overlay {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,.25);
+        }
+
+        #dialog-overlay.active {
+            display: flex;
+            animation: dialog-show .2s ease-out 0s 1;
+        }
+
+        @keyframes dialog-show {
+            from { opacity: 0; }
+        }
+
+        #dialog {
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 280px;
+            padding: 15px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        #dialog-title {
+            display: block;
+            width: 100%;
+            color: var(--title);
+            font-size: 24px;
+            text-align: left;
+            font-weight: normal;
+            margin: 10px auto;
+        }
+
+        #dialog > p {
+            color: var(--detail);
+            font-size: 16px;
+            margin: 10px 0;
+            word-break: break-word;
+            text-align: left;
+            line-height: 1.5em;
+        }
+
+        #ios-share {
+            height: 18px;
+            margin: 0 5px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            window.addEventListener('beforeinstallprompt', (event) => {
+                event.preventDefault();
+
+                let deferredPrompt = event;
+
+                document.getElementById("a2hs").addEventListener("click", (a2hsEvent) => {
+                    deferredPrompt.prompt();
+            
+                    deferredPrompt.userChoice.then((choiceResult) => {
+                        deferredPrompt = null;
+                    });
+                });
+            });
+
+            document.getElementById("a2hs-ios").addEventListener("click", (event) => {
+                event.preventDefault();
+                document.getElementById("dialog-overlay").classList.add("active")
+            });
+
+            document.getElementById("dialog-overlay").addEventListener("click", (event) => {
+                event.target.classList.remove("active");
+            })
+        });
+    </script>
+</head>
+<body>
+    <main id="layout">
+        <div id="icon-layout">
+            <img id="sirin-icon" src="/assets/sirin_impact.jpg" alt="Sirin as Honkai Impact's icon" />
+            <div id="app-detail">
+                <h1 id="app-title">Sirin Impact 3<sup>rd</sup></h1>
+                <button id="a2hs">
+                    Add to homescreen
+                </button>
+                <button id="a2hs-ios">
+                    Add to homescreen
+                </button>    
+            </div>
+        </div>
+        <p id="detail">
+            There was a joke of Sirin being an icon of Honkai Impact 3.  <br />
+            So I just want to make that icon look like real app. <br />
+        </p>
+        <p id="disclaimer">
+            * Disclaimer: This have nothing to do with official Honkai Impact 3<sup>rd</sup>, mihoyo and is not official, think of this as fan-made icon that can add to your homescreen.
+        </p>
+        <div id="dialog-overlay">
+            <div id="dialog">
+                <h6 id="dialog-title">iOS Guideline</h6>
+                <p>
+                    On iOS you have to add app to homescreen manually by:
+                </p>
+                <p>
+                    Using Safari > Tab on <img id="ios-share" src="/assets/ios_share.png" alt="iOS share icon" /> > Add to Homescreen
+                </p>
+                <p>Then, you're ready to go!</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
