@@ -273,11 +273,10 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             window.addEventListener('beforeinstallprompt', (event) => {
-                event.preventDefault();
-
                 let deferredPrompt = event;
 
                 document.getElementById("a2hs").addEventListener("click", (a2hsEvent) => {
+                    a2hsEvent.preventDefault();
                     deferredPrompt.prompt();
             
                     deferredPrompt.userChoice.then((choiceResult) => {
@@ -295,12 +294,20 @@
                 event.target.classList.remove("active");
             })
         });
+
+        window.onload = () => {
+            navigator.serviceWorker.register("/sw.js").then((serviceWorkerStatus) => {
+                console.log(serviceWorkerStatus)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
     </script>
 </head>
 <body>
     <main id="layout">
         <div id="icon-layout">
-            <img id="sirin-icon" src="/assets/sirin_impact.jpg" alt="Sirin as Honkai Impact's icon" />
+            <img id="sirin-icon" src="/assets/sirin_impact_192.png" alt="Sirin as Honkai Impact's icon" />
             <div id="app-detail">
                 <h1 id="app-title">Sirin Impact 3<sup>rd</sup></h1>
                 <button id="a2hs">
@@ -313,7 +320,7 @@
         </div>
         <p id="detail">
             There was a joke of Sirin being an icon of Honkai Impact 3.  <br />
-            So I just want to make that icon look like real app. <br />
+            So I just created a blank app with Sirin as an icon. <br />
         </p>
         <p id="disclaimer">
             * Disclaimer: This have nothing to do with official Honkai Impact 3<sup>rd</sup>, mihoyo and is not official, think of this as fan-made icon that can add to your homescreen.
